@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": "b1c2",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    },
+    {
+      "id": "b92a",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    },
+    {
+      "id": "d0e0",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    },
+    {
+      "id": "5d92",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    },
+    {
+      "id": "9847",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    },
+    {
+      "id": "6623",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    },
+    {
+      "id": "08c8",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    },
+    {
+      "id": "5b69",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    },
+    {
+      "id": "bba6",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    },
+    {
+      "id": "73f2",
+      "nom": "KLauss",
+      "email": "KLauss@example.com",
+      "message": "Hello, this is a message from the client."
+    }
+  ]
+}

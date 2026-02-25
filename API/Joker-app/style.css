@@ -1,0 +1,110 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.app-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+#header {
+  font-size: 1.5rem;
+  color: #2d3436;
+  margin-bottom: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid #6c5ce7;
+  padding-bottom: 15px;
+  display: inline-block;
+}
+
+/* Contenu de la blague */
+#content {
+  font-size: 1.1rem;
+  color: #636e72;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  min-height: 60px;
+}
+
+/* Zone du bouton */
+.content-btn {
+  margin-top: 20px;
+}
+
+/* Bouton */
+#btn {
+  background-color: #6c5ce7;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(108, 92, 231, 0.3);
+}
+
+#btn:hover {
+  background-color: #5b4cdb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(108, 92, 231, 0.4);
+}
+
+#btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(108, 92, 231, 0.3);
+}
+
+/* Animation d'apparition du contenu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#header,
+#content {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 25px;
+  }
+
+  #header {
+    font-size: 1.3rem;
+  }
+
+  #content {
+    font-size: 1rem;
+  }
+
+  #btn {
+    padding: 12px 24px;
+    width: 100%;
+  }
+}
+
