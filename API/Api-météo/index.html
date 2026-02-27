@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Météo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="header-meteo">
+        <div class="info">
+          <div class="locat">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-pin-icon lucide-map-pin"
+              >
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                />
+                <circle cx="12" cy="10" r="3" /></svg
+            ></span>
+            <h2>Cameroun</h2>
+          </div>
+          <div class="day">
+            <h2 id="day_1">Monday</h2>
+          </div>
+          <div class="precipitations">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-droplets-icon lucide-droplets"
+              >
+                <path
+                  d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"
+                />
+                <path
+                  d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"
+                /></svg
+            ></span>
+            <h2 id="pluie">32%</h2>
+          </div>
+          <div class="vent">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-wind-icon lucide-wind"
+              >
+                <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
+                <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
+                <path d="M9.8 4.4A2 2 0 1 1 11 8H2" /></svg
+            ></span>
+            <h2 id="vent">12 km/h</h2>
+          </div>
+          <div class="pression">
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-clock12-icon lucide-clock-12"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6" /></svg
+            ></span>
+            <h2 id="pression">1013 hPa</h2>
+          </div>
+        </div>
+        <div class="tem">
+          <h1
+            style="display: flex; flex-direction: column; align-items: flex-end"
+          >
+            <span id="temperature"></span>
+            <span style="font-size: 1.25rem; color: #dff9fd; padding: 10px 0"
+              >feels like 18°c</span
+            >
+          </h1>
+          <img src="./images/nuage ensoleillé.png" alt="nuage ensoleillé" />
+        </div>
+      </div>
+
+      <div class="main-meteo">
+        <div class="day-meteo">
+          <h2>Monday</h2>
+          <img src="./images/pluie.png" alt="" />
+          <h3
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-thermometer-sun-icon lucide-thermometer-sun"
+              >
+                <path d="M12 2v2" />
+                <path d="M12 8a4 4 0 0 0-1.645 7.647" />
+                <path d="M2 12h2" />
+                <path d="M20 14.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m6.34 17.66-1.41 1.41" /></svg></span
+            ><span class="tem_item">28°</span>
+          </h3>
+          <h4
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-umbrella-icon lucide-umbrella"
+              >
+                <path d="M12 13v7a2 2 0 0 0 4 0" />
+                <path d="M12 2v2" />
+                <path
+                  d="M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z"
+                /></svg></span
+            ><span class="humidity">32%</span>
+          </h4>
+          <h5
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-umbrella-icon lucide-umbrella"
+              >
+                <path d="M12 13v7a2 2 0 0 0 4 0" />
+                <path d="M12 2v2" />
+                <path
+                  d="M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z"
+                /></svg></span
+            ><span class="pressure_item">21hPa</span>
+          </h5>
+        </div>
+        <div class="day-meteo">
+          <h2>Tuesday</h2>
+          <img src="./images/soleil.png" alt="soleil" />
+          <h3
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-thermometer-sun-icon lucide-thermometer-sun"
+              >
+                <path d="M12 2v2" />
+                <path d="M12 8a4 4 0 0 0-1.645 7.647" />
+                <path d="M2 12h2" />
+                <path d="M20 14.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m6.34 17.66-1.41 1.41" /></svg></span
+            ><span class="tem_item1">28°</span>
+          </h3>
+          <h4
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-umbrella-icon lucide-umbrella"
+              >
+                <path d="M12 13v7a2 2 0 0 0 4 0" />
+                <path d="M12 2v2" />
+                <path
+                  d="M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z"
+                /></svg></span
+            ><span class="humidity1">32%</span>
+          </h4>
+          <h5
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-umbrella-icon lucide-umbrella"
+              >
+                <path d="M12 13v7a2 2 0 0 0 4 0" />
+                <path d="M12 2v2" />
+                <path
+                  d="M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z"
+                /></svg></span
+            ><span class="pressure_item1">21hPa</span>
+          </h5>
+        </div>
+        <div class="day-meteo">
+          <h2>Wednesday</h2>
+          <img src="./images/pluie.png" alt="nuage" />
+          <h3
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-thermometer-sun-icon lucide-thermometer-sun"
+              >
+                <path d="M12 2v2" />
+                <path d="M12 8a4 4 0 0 0-1.645 7.647" />
+                <path d="M2 12h2" />
+                <path d="M20 14.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m6.34 17.66-1.41 1.41" /></svg></span
+            ><span class="tem_item2">28°</span>
+          </h3>
+          <h4
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-umbrella-icon lucide-umbrella"
+              >
+                <path d="M12 13v7a2 2 0 0 0 4 0" />
+                <path d="M12 2v2" />
+                <path
+                  d="M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z"
+                /></svg></span
+            ><span class="humidity2">32%</span>
+          </h4>
+          <h5
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-umbrella-icon lucide-umbrella"
+              >
+                <path d="M12 13v7a2 2 0 0 0 4 0" />
+                <path d="M12 2v2" />
+                <path
+                  d="M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z"
+                /></svg></span
+            ><span class="pressure_item2">21hPa</span>
+          </h5>
+        </div>
+        <div class="day-meteo">
+          <h2>Thursday</h2>
+          <img src="./images/nuage ensoleillé.png" alt="nuage ensoleillé" />
+          <h3
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-thermometer-sun-icon lucide-thermometer-sun"
+              >
+                <path d="M12 2v2" />
+                <path d="M12 8a4 4 0 0 0-1.645 7.647" />
+                <path d="M2 12h2" />
+                <path d="M20 14.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m6.34 17.66-1.41 1.41" /></svg></span
+            ><span class="tem_item3">28°</span>
+          </h3>
+          <h4
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-umbrella-icon lucide-umbrella"
+              >
+                <path d="M12 13v7a2 2 0 0 0 4 0" />
+                <path d="M12 2v2" />
+                <path
+                  d="M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z"
+                /></svg></span
+            ><span class="humidity3">32%</span>
+          </h4>
+          <h5
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-wind-icon lucide-wind"
+              >
+                <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
+                <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
+                <path d="M9.8 4.4A2 2 0 1 1 11 8H2" /></svg></span
+            ><span class="pressure_item3">21hPa</span>
+          </h5>
+        </div>
+        <div class="day-meteo">
+          <h2>Friday</h2>
+          <img src="./images/nuage ensoleillé.png" alt="nuage ensoleillé" />
+          <h3
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-thermometer-sun-icon lucide-thermometer-sun"
+              >
+                <path d="M12 2v2" />
+                <path d="M12 8a4 4 0 0 0-1.645 7.647" />
+                <path d="M2 12h2" />
+                <path d="M20 14.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m6.34 17.66-1.41 1.41" /></svg></span
+            ><span class="tem_item4">28°</span>
+          </h3>
+          <h4
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-umbrella-icon lucide-umbrella"
+              >
+                <path d="M12 13v7a2 2 0 0 0 4 0" />
+                <path d="M12 2v2" />
+                <path
+                  d="M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z"
+                /></svg></span
+            ><span class="humidity4">32%</span>
+          </h4>
+          <h5
+            style="
+              font-size: 1rem;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            "
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-umbrella-icon lucide-umbrella"
+              >
+                <path d="M12 13v7a2 2 0 0 0 4 0" />
+                <path d="M12 2v2" />
+                <path
+                  d="M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z"
+                /></svg></span
+            ><span class="pressure_item4">21hPa</span>
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
