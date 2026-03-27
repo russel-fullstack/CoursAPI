@@ -106,3 +106,29 @@ body {
     position: relative;
     z-index: 1;
 }
+
+.cardMore{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 800px;
+    height: 350px;
+    border-radius: 16px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.more, #back{
+    padding: 10px;
+    background: linear-gradient(135deg, #A0C4FF, #9BF6FF);
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.more:hover, #back:hover {
+    transform: scale(1.15);
+}
